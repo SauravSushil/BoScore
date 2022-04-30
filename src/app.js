@@ -46,9 +46,11 @@ sports.forEach((ele) => {
                 class="img-fluid" src="images/${ele}.jpg" alt=""></div>
         <div class="col d-flex flex-column justify-content-center align-items-center sport_info"
             style="text-align: center;">
-            ${element.home_team} <br> vs <br> ${element.away_team}<br>Time: ${element.time}
-        </div>
-    </div>`
+            ${element.home_team}  vs  ${element.away_team}<br>
+            ${element.final_home_score===undefined || element.final_away_score===undefined ? 'DNF' :(element.final_home_score + ' - ' +element.final_away_score)}<br>
+            Time: ${element.time}
+            </div>
+        </div>`
         matches += match
       })
       let temp = {
